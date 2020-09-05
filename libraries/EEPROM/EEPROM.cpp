@@ -115,7 +115,7 @@ void EEPROMClass::write(int const address, uint8_t const value) {
     return;
   }
 
-  // Optimise _dirty. Only flagged if data written is different.
+  // Optimize _dirty. Only flagged if data written is different.
   uint8_t* pData = &_data[address];
   if (*pData != value)
   {
