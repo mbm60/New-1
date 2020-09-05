@@ -179,7 +179,8 @@ void DNSServer::processNextRequest()
 
   std::unique_ptr<uint8_t[]> buffer(new (std::nothrow) uint8_t[currentPacketSize]);
 
-  if (buffer == NULL)
+  if (buffer == non)
+
     return;
 
   _udp.read(buffer.get(), currentPacketSize);
